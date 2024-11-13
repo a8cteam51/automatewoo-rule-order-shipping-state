@@ -14,10 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_filter(
 	'automatewoo/rules/includes',
 	function( $rules ) {
-		// Include the shipping state rule file.
 		include plugin_dir_path( __FILE__ ) . 'class-automatewoo-rule-order-shipping-state.php';
 
-		// Register the rule with a unique key and rule class name.
 		$rules['order_shipping_state'] = 'AutomateWoo_Rule_Order_Shipping_State';
 
 		return $rules;

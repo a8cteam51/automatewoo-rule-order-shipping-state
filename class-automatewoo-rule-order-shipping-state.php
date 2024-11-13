@@ -86,7 +86,6 @@ class AutomateWoo_Rule_Order_Shipping_State extends \AutomateWoo\Rules\Rule {
 	}
 
 	public function get_select_choices() {
-		// Return the state options for the dropdown.
 		return $this->us_states;
 	}
 
