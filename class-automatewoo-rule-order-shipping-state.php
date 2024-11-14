@@ -94,9 +94,9 @@ class AutomateWoo_Rule_Order_Shipping_State extends \AutomateWoo\Rules\Rule {
 
 		switch ( $compare ) {
 			case 'is':
-				return $actual_value === $expected_value;
+				return ( in_array( $actual_value, $expected_value ) );
 			case 'is_not':
-				return $actual_value !== $expected_value;
+				return (! in_array( $actual_value, $expected_value ) );
 		}
 
 		return false;
